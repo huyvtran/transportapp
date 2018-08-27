@@ -1,0 +1,47 @@
+.ios, .md{
+    page-autocomplete {
+        ion-item{
+            padding-bottom: 15px !important;
+    
+            ion-icon{
+                font-size: 2.2rem !important;
+                color: #278DF8;
+            }
+    
+            ion-label{
+                font-size: 14px !important;
+                color: gray;
+                letter-spacing: 0.7px;
+            }
+    
+            ion-input{
+                border-bottom: 1px solid lightgray;
+            }
+        }
+    
+        .text-input-ios{
+            margin: 0 !important;
+            padding: 4px !important;
+            font-size: 18px !important;
+        }
+    
+        .text-input-md{
+            margin: 0 !important;
+            padding: 4px !important;
+            font-size: small !important;
+        }
+    
+        ion-item.pickup{
+            ion-icon{
+                transform: rotate(150deg);
+                padding: 5px;
+            }
+        }
+        .close{
+            font-size: 18px;
+            padding: 10px;
+            padding-bottom: 0;
+        }    
+    }
+}
+
