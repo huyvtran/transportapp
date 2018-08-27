@@ -19,6 +19,7 @@ import { IntroPage } from '../pages/intro/intro';
 import { HelpPage } from '../pages/help/help';
 import { ForgotpasswoedPage } from '../pages/forgotpasswoed/forgotpasswoed';
 import { EmailverificationPage } from '../pages/emailverification/emailverification';
+import { SettingsPage } from '../pages/settings/settings';
 import { DataProvider } from '../providers/data/data'; 
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule }   from '@angular/common/http';
@@ -29,6 +30,10 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ConnectivityServiceProvider } from '../providers/connectivity-service/connectivity-service';
 import { Network } from '@ionic-native/network';
 import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
+import { UploadProfilePage } from '../pages/upload-profile/upload-profile';
 
     
 @NgModule({                
@@ -46,14 +51,16 @@ import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
     IntroPage,      
     ForgotpasswoedPage,
     EmailverificationPage,    
-    HelpPage
+    HelpPage,
+    SettingsPage,
+    UploadProfilePage
   ],   
   imports: [
     BrowserModule,
     HttpClientModule,    
     HttpModule,
     IonicModule.forRoot(MyApp,{
-      preloadModules: true,  
+      preloadModules: true,     
     }),
     IonicStorageModule.forRoot()
   ],
@@ -72,7 +79,9 @@ import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
     IntroPage,
     ForgotpasswoedPage,
     EmailverificationPage,
-    HelpPage       
+    HelpPage,
+    SettingsPage,
+    UploadProfilePage      
   ],
   providers: [
     StatusBar,
@@ -81,6 +90,10 @@ import { GoogleMapsProvider } from '../providers/google-maps/google-maps';
     Camera,          
     ConnectivityServiceProvider,    
     Network,
+    File,
+    Transfer,
+    Camera,
+    FilePath,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataProvider,
     ConnectivityServiceProvider,

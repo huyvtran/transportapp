@@ -29,11 +29,28 @@
           <ion-label stacked>Drop Off Location</ion-label>
           <ion-input [(ngModel)]="autocomplete.query" (ionChange)="updateSearch()" (ionCancel)="dismiss()"></ion-input>
       </ion-item>
+
+      <ion-item *ngIf="action != 'drop' && action != 'pickup' && action != 'getDriver'" class="drop">
+          <ion-icon item-start ios="md-pin" md="md-pin"></ion-icon>
+          <ion-label stacked>Select Your Favorite Location</ion-label>
+          <ion-input [(ngModel)]="autocomplete.query" (ionChange)="updateSearch()" (ionCancel)="dismiss()"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="action == 'driver'" class="drop">
+          <ion-icon item-start ios="md-pin" md="md-pin"></ion-icon>
+          <ion-label stacked>Select Your Favourite Driver</ion-label>
+          <ion-input [(ngModel)]="qdriver.query" (ionChange)="updateDriverSearch()" (ionCancel)="dismiss()"></ion-input>
+      </ion-item>
+
   </ion-header>
   <ion-content>
     <ion-list>
       <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">
         {{ item }}
       </ion-item>
+      <ion-item *ngFor="let item of allDrivers" tappable (click)="chooseItem(item)">
+          {{ item }}
+        </ion-item>
     </ion-list>
   </ion-content>
+  

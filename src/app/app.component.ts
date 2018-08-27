@@ -12,6 +12,7 @@ import { EmailverificationPage } from '../pages/emailverification/emailverificat
 import { CustomerProfilePage } from '../pages/customer-profile/customer-profile'; 
 import { MapPage } from '../pages/map/map';
 import { HelpPage } from '../pages/help/help';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({   
   templateUrl: 'app.html'
@@ -49,7 +50,8 @@ export class MyApp {
       customerProfilePage : CustomerProfilePage,
       findabranchPage : HomePage,
       mapPage : MapPage,    
-      helpPage : HelpPage
+      helpPage : HelpPage,
+      settingsPage : SettingsPage    
     }  
 }
 }

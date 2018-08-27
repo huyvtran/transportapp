@@ -161,4 +161,21 @@ export class DataProvider {
    return this.ht.get(this.baseURL+"faqs",{headers: headers}).map(res=> res.json());
   }
 
+  getallDrivers()
+  {
+    this.storage.get('token').then(data=>{
+
+      this.token = data;
+     // console.log("Token here"+this.token);
+    });
+    
+    let headers = new Headers({
+
+      'Accept' : 'application/json',
+      'Authorization' : 'Bearer '+this.token
+    });
+
+   return this.ht.get(this.baseURL+"admin/driver/list",{headers: headers}).map(res=> res.json());
+  }
+
 }

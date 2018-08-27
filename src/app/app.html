@@ -72,6 +72,19 @@
                   </ion-row>
                 </ion-grid> 
           </button>
+          <button class="sideMenuItem" menuClose detail-none ion-item icon-left (click)="nav.setRoot(pages.settingsPage)">  
+              <!--<ion-icon ios="ios-book" md="md-book"></ion-icon>-->
+              <ion-grid>
+                  <ion-row>
+                    <ion-col col-3>   
+                      <img class="list_item_icon" src="../assets/imgs/settings.png"/>
+                    </ion-col>
+                    <ion-col col-9>
+                        <div class="list_item_title">Settings</div>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+          </button>
           <button class="sideMenuItem" menuClose detail-none ion-item icon-left (click)="nav.setRoot(pages.homePage)">  
               <!--<ion-icon ios="ios-book" md="md-book"></ion-icon>-->
               <ion-grid>

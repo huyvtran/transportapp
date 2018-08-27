@@ -9,6 +9,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { AvatarPage } from '../avatar/avatar'; 
+import { UploadProfilePage } from '../upload-profile/upload-profile';
      
 /**
  * Generated class for the CustomerProfilePage page.
@@ -92,6 +93,6 @@ export class CustomerProfilePage {
 
   gotoAvatarPage()
   {
-    this.navCtrl.setRoot(AvatarPage);
+    this.navCtrl.push(UploadProfilePage);
   }
 }
